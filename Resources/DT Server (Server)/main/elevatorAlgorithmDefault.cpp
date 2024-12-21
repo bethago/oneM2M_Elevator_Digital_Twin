@@ -771,7 +771,7 @@ void elevatorAlgorithmDefault::printTimeDeltaWhenSpawn()
 		tstruct.tm_year + 1900, tstruct.tm_mon + 1, tstruct.tm_mday, tstruct.tm_hour, tstruct.tm_min,
 		tstruct.tm_sec, milliseconds.count()
 	);
-	//std::puts(timeString);
+	std::puts(timeString);
 
 	std::wstring txt_log_string(timeString, timeString + strlen(timeString));
 	std::wstring csv_log_string = make_csv_string(RTS_SPAWN);
@@ -844,7 +844,7 @@ void elevatorAlgorithmDefault::printTimeDeltaWhenStop()
 		tstruct.tm_year + 1900, tstruct.tm_mon + 1, tstruct.tm_mday, tstruct.tm_hour, tstruct.tm_min,
 		tstruct.tm_sec, milliseconds.count(), diffSeconds
 	);
-	//puts(timeString);
+	puts(timeString);
 
 	std::wstring txt_log_string(timeString, timeString + strlen(timeString));
 	std::wstring csv_log_string = make_csv_string(RTS_STOP);

@@ -4,7 +4,7 @@
 namespace fs = boost::filesystem;
 
 //THIS IS FOR DT_SERVER information
-#define DT_SERVER_ADDR L"192.168.0.134"
+#define DT_SERVER_ADDR L"127.0.0.1"
 #define EMBEDDED_LISTEN_PORT 10050
 #define oneM2M_NOTIFICATION_LISTEN_PORT 10053
 
@@ -13,15 +13,15 @@ namespace fs = boost::filesystem;
 //#define ACME
 #define UE5
 
-#define oneM2M_CSE_Server L"192.168.0.178"
-#define oneM2M_CSE_Port L 10051
+#define oneM2M_CSE_Server L"127.0.0.1"
+#define oneM2M_CSE_Port L 3000
 
 // DT SERVER NEEDS WHEN IT USES HTTP PROTOCOL TO oneM2M CSE SERVER
 #ifdef HTTP
 	#define PROTOCOL_NAME L"http://"
-	#define CSE_ADDRW L"192.168.0.178"
-	#define CSE_ADDRS "192.168.0.178"
-	#define CSE_LISTEN_PORT 10051
+	#define CSE_ADDRW L"127.0.0.1"
+	#define CSE_ADDRS "127.0.0.1"
+	#define CSE_LISTEN_PORT 3000
 	#define BUFFER_SIZE 65536
 #endif // HTTP
 
@@ -34,7 +34,8 @@ namespace fs = boost::filesystem;
 #ifdef oneM2M_tinyIoT
 	#define DEFAULT_ACP_NAME L"DT_SERVER"
 	#define DEFAULT_ORIGINATOR_NAME L"CAdmin"
-	#define DEFAULT_CSE_NAME L"tinyIoT"
+	#define DEFAULT_CSE_NAME L"TinyIoT"
+	//#define DEFAULT_CSE_NAME L"tinyIoT"
 	#define DEFAULT_RI L"DT_RI"
 	#define DEFAULT_RVI L"2a"
 #endif
